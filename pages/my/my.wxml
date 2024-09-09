@@ -1,0 +1,73 @@
+<!--pages/my/my.wxml-->
+<view class="login-container" wx:if="{{code == ''}}">
+  <image src="/images/tabs/photo.jpg" mode="" />
+  <button type="primary" class="btn-login" open-type="getUserInfo" bindtap="login" data-value="login">登录</button>
+  <button type="primary" class="btn-login" open-type="getUserInfo" bindtap="login" data-value="register">注册</button>
+  <view class="tips-text">
+    登录后尽享更多权益
+  </view>
+</view>
+
+<view class="my-userinfo-container" wx:else>
+  <view class="top-box" bind:tap="modify" data-value="modify" data-useraccount="{{useraccount}}">
+    <image src="{{imgUrl}}" class="avatar"></image>
+    <view class="nickname">
+      {{username}}
+    </view>
+  </view>
+  <view class="panel-list">
+    <view class="panel">
+      <view class="panel-body">
+        <navigator class="panel-item" url="/packageB/pages/watch/watch?page=comment">
+          <text>{{commentNum}}</text>
+          <text>评论的电影</text>
+        </navigator>
+        <navigator class="panel-item" url="/packageB/pages/watch/watch?page=footprint">
+          <text>{{browseNum}}</text>
+          <text>浏览的足迹</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="panel">
+      <view class="panel-title">
+        推荐服务
+      </view>
+      <view class="panel-body">
+        <navigator class="panel-item" url="/packageA/pages/boos/boos?page=welfare">
+          <image src="/images/tabs/welfare.png" class="icon"></image>
+          <text>嘉膑公益</text>
+        </navigator>
+        <navigator class="panel-item" url="/packageA/pages/boos/boos?page=recharge">
+          <image src="/images/tabs/recharge.png" class="icon"></image>
+          <text>能量加油站</text>
+        </navigator>
+        <navigator class="panel-item" url="/packageA/pages/boos/boos?page=serve">
+          <image src="/images/tabs/serve.png" class="icon"></image>
+          <text>联系客服</text>
+        </navigator>
+        <navigator class="panel-item" url="/packageA/pages/message/message?id=id">
+          <image src="/images/tabs/message.png" class="icon"></image>
+          <text>消息</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="panel">
+      <navigator class="panel-list-item" url="/packageA/pages/manage/manage" wx:if="{{power == 1}}">
+        <text>编辑电影</text>
+        <image src="/images/tabs/right.png" class="icon"></image>
+      </navigator>
+      <navigator class="panel-list-item" url="/packageB/pages/agreement/agreement?title=用户协议">
+        <text>用户协议</text>
+        <image src="/images/tabs/right.png" class="icon"></image>
+      </navigator>
+      <navigator class="panel-list-item" url="/packageB/pages/agreement/agreement?title=隐私政策">
+        <text>隐私政策</text>
+        <image src="/images/tabs/right.png" class="icon"></image>
+      </navigator>
+      <view class="panel-list-item" bind:tap="exit">
+        <text>退出登录</text>
+        <image src="/images/tabs/right.png" class="icon"></image>
+      </view>
+    </view>
+  </view>
+</view>

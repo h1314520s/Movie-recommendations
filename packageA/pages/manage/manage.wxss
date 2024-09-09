@@ -1,0 +1,38 @@
+/* pages/manage/manage.wxss */
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+page{
+  height: 100vh;
+  background-color: #dfdddd;
+}
+
+.bg {
+  height: 100vh;
+}
+
+.watch-item {
+  background-color: #fff;
+  margin: 10rpx 20rpx;
+  padding-left: 10rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  border-radius: 5px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.watch-item .serialNumber {
+  font-weight: 500;
+}
+
+.add {
+  margin-top: 20rpx;
+  padding: 0;
+}

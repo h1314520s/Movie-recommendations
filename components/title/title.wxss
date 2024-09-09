@@ -1,0 +1,8 @@
+/* components/title/title.wxss */
+.title {
+  font-weight: 500;
+  padding: 0 30rpx 0 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

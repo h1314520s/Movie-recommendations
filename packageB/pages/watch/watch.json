@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "my-search": "/components/search/search",
+    "mp-slideview": "weui-miniprogram/slideview/slideview",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-rate": "@vant/weapp/rate/index"
+  }
+}

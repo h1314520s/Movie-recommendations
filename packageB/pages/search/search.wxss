@@ -1,0 +1,87 @@
+/* packageB/pages/search/search.wxss */
+page {
+  height: 100vh;
+  background: #faf7f7;
+}
+
+.my-search-container {
+  height: 50px;
+  background-color: #e54847;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.my-search-box {
+  height: 36px;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  width: 100%;
+}
+
+.my-search-box .van-search {
+  height: 36px;
+}
+
+.recent {
+  margin-top: 5rpx;
+  padding-top: 10rpx;
+  border-top: 2px solid #e6e6e6;
+}
+
+.top-recent {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 30rpx;
+}
+
+.top-recent-list {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15rpx;
+}
+
+.top-recent-list image {
+  width: 74px;
+  height: 104px;
+  padding: 0 10rpx;
+}
+
+.top-recent-introduce {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10rpx;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 5px;
+}
+
+.top-recent-introduce text {
+  flex: 1;
+  font-size: 14px;
+}
+
+.top-recent-introduce .score {
+  font-size: 16px;
+  font-weight: 700;
+  color: #faaf00;
+}
+
+.top-recent-introduce .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+
+.txt {
+  text-align: center;
+  margin-top: 40%;
+}

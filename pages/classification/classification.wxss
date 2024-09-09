@@ -1,0 +1,72 @@
+/* pages/classification/classification.wxss */
+.tab {
+  width: 100%;
+  height: 100vh;
+  border: 2rpxsolid #cccccc;
+  display: flex;
+}
+
+.tab-left {
+  background: #eeeeee;
+}
+
+.tab-left view {
+  width: 100rpx;
+  text-align: center;
+  line-height: 90rpx;
+  padding:  0 30rpx;
+  font-size: 36rpx;
+}
+
+.tab-left .cur {
+  background: #ffffff;
+  border-left: 4px solid #e54847;
+}
+
+.tab-right {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.tab-right .tab-right-conent {
+  display: none;
+  margin: 20rpx 30rpx;
+}
+
+.tab-right-conent .conent {
+  display: flex;
+  margin-bottom: 20rpx;
+  padding-bottom: 5rpx;
+  border-bottom: 1px solid #e5e5e5;
+} 
+
+.conent-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+  padding: 40rpx 0 0 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.conent-img image {
+  width: 143rpx;
+  height: 198rpx;
+  border-radius: 5px;
+}
+
+.tab-right .cur {
+  display: block;
+}

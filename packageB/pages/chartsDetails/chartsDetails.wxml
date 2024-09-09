@@ -1,0 +1,36 @@
+<!--components/chartsDetails/chartsDetails.wxml-->
+<scroll-view scroll-y style="height: 100%;" refresher-enabled="{{true}}"	bindscrolltolower="scrolltolower" 	bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+<view class="top">
+  <text class="top-one">{{title}}</text>
+  <view class="top-two">
+    <image src="/images/tabs/翅膀-left.png" mode="widthFix" /> <text>嘉膑</text>
+    <image src="/images/tabs/翅膀-right.png" mode="widthFix" />
+  </view>
+</view>
+
+<view>
+  <view class="content" wx:for="{{watchList}}" wx:key="index">
+    <text class="item-serialNumber">NO.{{index + 1}}</text>
+    <view class="item-content">
+      <navigator class="item-img"  url="/packageB/pages/watchDetails/watchDetails">
+        <image src="{{item.img[0].url}}" mode="widthFix" />
+      </navigator>
+      <navigator class="item-details"  url="/packageB/pages/watchDetails/watchDetails">
+        <text class="item-title">{{item.title}}</text>
+        <view class="item-score" wx:if="{{item.score}}">
+          <van-rate value="{{item.score / 2}}" size="{{ 13 }}" allow-half="true" color="#ffd21e" void-icon="star" void-color="#eee" count="5" readonly="false" />
+          {{item.score}}
+        </view>
+        <view class="item-noScore" wx:else>
+          暂未评分
+        </view>
+        <text class="item-time">剧情：{{item.watchType}} - {{item.release}}上映 - 片长{{item.watchTime}}分钟</text>
+      </navigator>
+      <view class="item-watch" bindtap="goFilmReview" data-index="{{index}}">
+        <van-icon name="like" color="#FEC36E" />
+        <view>看过</view>
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>

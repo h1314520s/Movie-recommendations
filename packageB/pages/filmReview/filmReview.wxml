@@ -1,0 +1,16 @@
+<!--components/filmReview/filmReview.wxml-->
+<view class="score">
+  <text>点击星星评分</text>
+  <van-rate size="{{ 25 }}" color="#ffd21e" void-icon="star" allow-half="true" void-color="#eee" bind:change="onChange" value="{{ score / 2 }}"/>
+</view>
+
+<view class="comment">
+  <van-cell-group>
+    <van-field value="{{ value }}" type="textarea" placeholder="写几句评价吧..." border="{{ false }}" autosize="true"  auto-focus="true" bindchange="input"/>
+  </van-cell-group>
+</view>
+
+<view class="determine">
+  <van-button type="primary" size="large" bindtap="edit" wx:if="{{editType}}">修改</van-button>
+  <van-button type="primary" size="large" bindtap="submit" wx:else>确定</van-button>
+</view>

@@ -1,0 +1,60 @@
+/* pages/message/message.wxss */
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+.bg {
+  height: 100vh;
+}
+
+.message {
+  display: flex;
+}
+
+.message-headSculpture {
+  padding: 20rpx;
+}
+
+.message-headSculpture image {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.message-conent {
+  flex: 1;
+  padding: 20rpx 40rpx 20rpx 20rpx;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.message-conent-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-conent-title {
+  font-size: 36rpx;
+}
+
+.message-conent-time {
+  font-size: 24rpx;
+}
+
+.message-conent-bottom {
+  font-size: 36rpx;
+  color: #6b6a6a;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.empty {
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,26 @@
+<!--components/boos/boos.wxml-->
+<view class="welfare boos" wx:if="{{parameters =='welfare'}}">
+  <text>支持我是本平台唯一的公益</text>
+  <text>扫描支付本平台</text>
+  <view>
+    <image src="cloud://cloud-5gfnau1kaecbb8e1.636c-cloud-5gfnau1kaecbb8e1-1314821660/zfb.jpg" mode="scaleToFill"/>
+    <image src="cloud://cloud-5gfnau1kaecbb8e1.636c-cloud-5gfnau1kaecbb8e1-1314821660/wx.jpg" mode="scaleToFill"/>
+  </view>
+</view>
+
+<view class="recharge boos" wx:if="{{parameters == 'recharge'}}">
+  <text>扫描支付支持本平台</text>
+  <view>
+    <image src="cloud://cloud-5gfnau1kaecbb8e1.636c-cloud-5gfnau1kaecbb8e1-1314821660/zfb.jpg" mode="scaleToFill"/>
+    <image src="cloud://cloud-5gfnau1kaecbb8e1.636c-cloud-5gfnau1kaecbb8e1-1314821660/wx.jpg" mode="scaleToFill"/>
+  </view>
+</view>
+
+<view class="serve boos" wx:if="{{parameters == 'serve'}}">
+  <view>
+    <text>若出现问题请添加扣扣：2924823003</text>
+  </view>
+  <view>
+    <text>或发送邮件：hxj1191762480@163.com</text>
+  </view>
+</view>

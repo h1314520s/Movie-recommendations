@@ -1,0 +1,21 @@
+/* components/filmReview/filmReview.wxss */
+.score {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #a7a7a7;
+  gap: 20rpx;
+  margin-top: 30rpx;
+}
+
+.comment {
+  margin: 20rpx 20rpx;
+  height: 500rpx;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid #c5c4c4;
+}
+
+.determine {
+  margin: 20rpx 10rpx;
+}

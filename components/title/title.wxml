@@ -1,0 +1,7 @@
+<!--components/title/title.wxml-->
+<view class="title">
+    <text>{{childValue.title}} </text>
+    <navigator url="/packageB/pages/chartsDetails/chartsDetails?title={{childValue.title}}">更多<van-icon name="arrow" />
+    </navigator>
+</view>
+

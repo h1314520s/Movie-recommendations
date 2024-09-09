@@ -1,0 +1,98 @@
+/* components/chartsDetails/chartsDetails.wxss */
+page {
+  background-color: #e9e7e7;
+  height: 100vh;
+}
+
+.top {
+  text-align: center;
+  padding: 120rpx 0 50rpx;
+  background-color: #3f3f3f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.top-one {
+  font-size: 48rpx;
+}
+
+.top-two {
+  margin: 20rpx;
+}
+
+.top-two image {
+  width: 100rpx;
+}
+
+.content {
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.item-serialNumber {
+  background-color: #bebcbc;
+  background-image: none;
+  padding: 5rpx 10rpx;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.content:nth-child(1) .item-serialNumber{
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-color: none;
+}
+
+.content:nth-child(2) .item-serialNumber{
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+  background-color: none;
+}
+
+.content:nth-child(3) .item-serialNumber{
+  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  background-color: none;
+}
+
+.item-content {
+  margin: 30rpx 0;
+  display: flex;
+  gap: 40rpx;
+}
+
+.item-content .item-img image{
+  width: 160rpx;
+  height: 220rpx;
+}
+
+.item-details {
+  width: 300rpx;
+  height: 228rpx;
+}
+
+.item-details .item-title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.item-details .item-score {
+  font-size: 18rpx;
+  margin: 10rpx 0;
+}
+
+.item-details .item-noScore {
+  font-size: 32rpx;
+  margin: 10rpx 0;
+}
+
+.item-details .item-time {
+  font-size: 24rpx;
+  color: #707070;
+}
+
+.item-watch {
+  flex: 1;
+  padding-top: 68rpx;
+  text-align: center;
+  border-left: 1px dashed #bebcbc;
+  color: #FEC36E;
+}

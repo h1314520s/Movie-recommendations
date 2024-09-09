@@ -1,0 +1,101 @@
+<!--components/edit/edit.wxml-->
+<view class="edit">
+  <van-cell-group>
+    <van-field model:value="{{ watchName }}" placeholder="请输入电影名" label="电影" border="{{ false }}" />
+
+    <van-field model:value="{{ synopsis }}" placeholder="请输入简介" label="简介" type="textarea" autosize border="{{ false }}" />
+
+    <van-field model:value="{{ introduce }}" placeholder="请输入介绍" label="介绍" type="textarea" autosize border="{{ false }}" />
+
+    <van-field model:value="{{ watchTime }}" placeholder="请输入时间" label="时长" type="number" border="{{ false }}" />
+
+    <van-cell title="选择上映时间" value="{{ release }}" bind:click="onDisplay"/>
+    <van-calendar show="{{ showTime }}" bind:close="onClose" bind:confirm="onConfirmTime" min-date="{{minDate}}" />
+
+    <view class="up">
+      <view class="title">选择电影类型</view>
+      <checkbox-group bindchange="watchTypeChange" class="watchType">
+        <checkbox value="{{item.type}}" wx:for="{{list}}" wx:key="index" checked="{{item.checked}}">
+          {{item.title}}
+        </checkbox>
+      </checkbox-group>
+    </view>
+
+    <van-field center clearable label="出产地点" border="{{ false }}" value="{{location}}" disabled use-button-slot>
+      <van-button slot="button" size="small" type="default" bindtap="isPicker">
+        选择地点
+      </van-button>
+    </van-field>
+
+    <view class="address" wx:if="{{showPicker}}">
+      <van-picker show-toolbar title="标题" columns="{{ columns }}" bind:cancel="onCancelLocation" bind:confirm="onConfirmLocation" />
+    </view>
+  </van-cell-group>
+
+  <view class="up">
+    <view class="title">上传电影海报</view>
+    <view class="up-content">
+      <view class="upload" wx:for="{{watchPoster}}" wx:key="index">
+        <van-icon name="cross" class="icon" bind:tap="edit" data-type="watchPoster" data-index="{{index}}" />
+        <image src="{{item.url}}" mode="" />
+      </view>
+      <view class="upload" bind:tap="add" data-type="watchPoster" wx:if="{{watchPoster.length == 0}}">
+        <image src="/images/tabs/add.png" />
+      </view>
+    </view>
+  </view>
+
+  <view class="up">
+    <view class="title">上传电影预告片</view>
+    <view class="up-content">
+      <view class="upload" wx:for="{{watchHerald}}" wx:key="index">
+        <van-icon name="cross" class="icon" bind:tap="edit" data-type="watchHerald" data-index="{{index}}" />
+        <image src="{{item.url}}" mode="" />
+      </view>
+      <view class="upload" bind:tap="add" data-type="watchHerald">
+        <image src="/images/tabs/add.png" />
+      </view>
+    </view>
+  </view>
+
+  <view class="up">
+    <view class="title">上传剧组</view>
+    <view class="up-content">
+      <view class="upload-star" wx:for="{{watchStar}}" wx:key="index">
+        <van-icon name="cross" class="icon" bind:tap="edit" data-type="watchStar" data-index="{{index}}" />
+        <image src="{{item.url}}" mode="" />
+        <view class="top">名字：{{item.starName}}</view>
+        <view>饰演/岗位：{{item.starPost}}</view>
+      </view>
+      <view class="upload-star" bind:tap="showStar">
+        <image src="/images/tabs/add.png" class="add" />
+      </view>
+    </view>
+    <van-popup show="{{ starShow }}" bind:close="onCloseStar" custom-style="width: 500rpx; height: 450rpx;  text-align: center; padding-top: 25px;">
+      <view class="upload starUp" wx:if="{{starImg}}">
+        <image src="{{starImg}}" />
+      </view>
+      <view class="upload starUp" bind:tap="add" data-type="watchStar" wx:if="{{!starImg}}">
+        <image src="/images/tabs/add.png" />
+      </view>
+      <van-field model:value="{{ starName }}" placeholder="请输入名字" label="名字" border="{{ false }}" />
+      <van-field model:value="{{ starPost }}" placeholder="请输入饰演/岗位" label="饰演/岗位" border="{{ false }}" />
+    </van-popup>
+  </view>
+
+  <view class="up">
+    <view class="title">上传电影剧组照</view>
+    <view class="up-content">
+      <view class="upload" wx:for="{{watchDrama}}" wx:key="index">
+        <van-icon name="cross" class="icon" bind:tap="edit" data-type="watchDrama" data-index="{{index}}" />
+        <image src="{{item.url}}" mode="" />
+      </view>
+      <view class="upload" bind:tap="add" data-type="watchDrama">
+        <image src="/images/tabs/add.png" />
+      </view>
+    </view>
+  </view>
+
+  <button bind:tap="refer" wx:if="{{refer}}">提交</button>
+  <button bind:tap="upedit" wx:else>修改</button>
+</view>

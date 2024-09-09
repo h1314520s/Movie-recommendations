@@ -1,0 +1,21 @@
+<!--pages/charts/charts.wxml-->
+<view class="charts">
+  <navigator class="charts-top"
+  url="/packageB/pages/chartsDetails/chartsDetails?title={{chartsList[0].title}}">
+    <image src="cloud://cloud-5gfnau1kaecbb8e1.636c-cloud-5gfnau1kaecbb8e1-1314821660/bg.png" class="bg" />
+    <text class="charts-top-title">{{chartsList[0].title}}</text>
+    <view class="charts-top-img">
+        <image wx:for="{{chartsList[0].charts}}" wx:key="index" src="{{item.img[0].url}}" alt="" />
+    </view>
+  </navigator>
+  <navigator url="/packageB/pages/chartsDetails/chartsDetails?title={{item.title}}" class="charts-bottom" wx:for="{{chartsList}}" wx:key="index" wx:if="{{i > 0}}" wx:for-index="i">
+    <view class="charts-bottom-left">
+        <image src="{{item.img}}" />
+    </view>
+    <view class="charts-bottom-right">
+      <view class="charts-bottom-introduce">
+        <text wx:for="{{item.charts}}" wx:key="index">{{index + 1}}. {{item.title}}<text class="charts-bottom-score" wx:if="{{item.score}}">{{item.score}}分</text></text>
+      </view>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/message/message.wxml-->
+<view class="bg" bind:touchstart="touchstart">
+  <view wx:if="{{messageList.length > 0}}">
+    <mp-slideview wx:for="{{messageList}}" show="{{showslide}}" buttons="{{slideButtons}}" wx:key="index" bindbuttontap="onBtn" data-btn="{{item}}">
+      <view class="message">
+        <view class="message-headSculpture">
+          <image src="{{item.img}}" mode="" />
+        </view>
+        <view class="message-conent">
+          <view class="message-conent-top">
+            <text class="message-conent-title">{{item.title}}</text>
+            <text class="message-conent-time">{{item.time}}</text>
+          </view>
+          <view class="message-conent-bottom">
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+    </mp-slideview>
+  </view>
+  <view wx:else class="empty">
+    <text>暂无任何消息</text>
+  </view>
+</view>

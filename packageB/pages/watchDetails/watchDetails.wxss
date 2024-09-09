@@ -1,0 +1,250 @@
+/* components/watchDetails/watchDetails.wxss */
+page {
+  height: 100vh;
+}
+
+.watch {
+  background-color: rgb(76, 56, 59);
+  padding: 40rpx 30rpx;
+}
+
+.watch-content {
+  display: flex;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.watch-content image {
+  width: 200rpx;
+  height: 280rpx;
+  border-radius: 4px;
+}
+
+.watch-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.watch-details .title {
+  font-size: 46rpx;
+  color: #fff;
+  padding-bottom: 20rpx;
+}
+
+.watch-details .honor {
+  font-size: 26rpx;
+  color: #9D5F00;
+  margin: 5rpx 0 13rpx;
+}
+
+.watch-details .sort {
+  background: linear-gradient(#FFF3E6, #FEF0B3);
+  padding: 5rpx 22rpx 5rpx 18rpx;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.watch-details .label {
+  background: linear-gradient(45deg, #FFD395, #FEC36E);
+  padding: 5rpx 20rpx;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.watch-details .type,
+.time {
+  font-size: 30rpx;
+  padding: 10rpx 0;
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.watch-score {
+  padding: 30rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.score-title {
+  font-size: 22rpx;
+  line-height: 44rpx;
+  color: #fff;
+}
+
+.watch-score .score {
+  display: flex;
+}
+
+.watch-score .score .fraction {
+  font-size: 108rpx;
+  line-height: 108rpx;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.watch-score .score .noFraction {
+  font-size: 38rpx;
+  line-height: 54rpx;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.watch-score .score .star {
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.watch-score .score .star .rater {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 24rpx;
+  padding-left: 15rpx;
+}
+
+.score-see {
+  margin-left: 20rpx;
+}
+
+.score-see  .van-button__text {
+  color: #000;
+  font-weight: 700;
+}
+
+.score-see  .see-icon {
+  margin:  10rpx;
+  color: #FEC36E;
+}
+
+.card, .celebrities, .subject-pics{
+  padding: 40rpx 30rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.subject-intro-conent {
+  color: #191919;
+  line-height: 44rpx;
+  font-size: 30rpx;
+}
+
+.omit {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.isShow {
+  position: fixed;
+  top: 100vh;
+}
+
+.celebrities-content {
+  display: flex;
+  gap: 25rpx;
+  overflow-x: scroll;
+}
+
+.celebrities-item {
+  width: 140rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5rpx;
+}
+
+.celebrities-item image {
+  width: 140rpx;
+  height: 200rpx;
+}
+
+.celebrities-item .name {
+  font-size: 28rpx;
+}
+
+.celebrities-item .position {
+  font-size: 24rpx;
+}
+
+.subject-pics-content {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20rpx;
+}
+
+.subject-pics-content{
+  height: 200rpx;
+}
+
+.subject-pics-video video, .videoPlay{
+  flex-shrink: 0;
+  width: 320rpx;
+  height: 200rpx;
+}
+
+.videoPlay {
+  text-align: center;
+  background-color: #000000;
+}
+
+.videoPlay .van-icon {
+  line-height: 200rpx;
+}
+
+.subject-pics-content image {
+  height: 200rpx;
+}
+
+.subject-reviews {
+  margin: 40rpx 30rpx;
+  padding: 20rpx;
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews-item {
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.critic {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.critic image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-bottom: 30rpx;
+}
+
+.critic-information {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30rpx;
+}
+
+.critic-information .critic-information-name {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.comment {
+  word-break: break-all;
+}

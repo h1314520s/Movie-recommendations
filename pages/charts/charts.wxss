@@ -1,0 +1,93 @@
+/* pages/charts/charts.wxss */
+page {
+  height: 100vh;
+  background: #faf7f7;
+}
+
+.charts {
+  padding: 0 15rpx;
+}
+
+.charts-top {
+  width: 100%;
+  height: 330rpx;
+  padding: 30rpx 50rpx;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.charts-top .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.charts-top-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.charts-top-img {
+  position: relative;
+  margin: 30rpx 0;
+} 
+
+.charts-top-img image {
+  position: absolute;
+  width: 64px;
+  height: 89px;
+  box-shadow: 2px 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.charts-top-img image:nth-child(1) {
+  left: 100px;
+}
+
+.charts-top-img image:nth-child(2) {
+  left: 50px;
+}
+
+.charts-bottom {
+  width: 100%;
+  display: flex;
+  margin-top: 40rpx;
+}
+
+.charts-bottom-left {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.charts-bottom-left image {
+  width: 100%;
+  height: 100%;
+}
+
+.charts-bottom-right {
+  flex: 1;
+  padding: 20rpx 0;
+}
+
+.charts-bottom-introduce {
+  border: 1px solid #c6c6c6;
+  border-left: 0;
+  padding: 10rpx 0 10rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 13rpx;
+  border-radius: 0 5px 5px 0;
+  height: 150rpx;
+}
+
+.charts-bottom-score {
+  margin-left: 15rpx;
+  color: #faaf00;
+}

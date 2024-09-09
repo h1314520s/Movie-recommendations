@@ -1,0 +1,90 @@
+<!--components/watchDetails/watchDetails.wxml-->
+<view class="watch">
+  <view class="watch-content">
+    <view class="content-iamge">
+      <image src="{{watch.watchPoster[0].url}}" mode="" />
+    </view>
+    <view class="watch-details">
+      <text class="title">{{watch.watchName}}</text>
+      <view class="honor"><text class="sort">NO.4</text> <text class="label">2022最值得期待的影视</text></view>
+      <text class="type">剧情: {{watchType}}</text>
+      <text class="time">{{watch.release}}上映 - {{watch.watchTime}}分钟</text>
+    </view>
+  </view>
+  <view class="watch-score">
+    <view class="score-title">嘉膑评分</view>
+    <view class="score">
+      <text class="fraction" wx:if="{{watch.score}}">{{watch.score}}</text>
+      <text class="noFraction" wx:else="">暂无评分</text>
+      <view class="star">
+        <van-rate value="{{watch.score / 2}}" size="{{ 20 }}" allow-half="true" color="#ffd21e" void-icon="star" void-color="#eee" count="5" readonly="false" />
+        <text class="rater" wx:if="{{commentList != 0}}">{{commentList.length}}人评分</text>
+      </view>
+      <view class="score-see">
+        <van-button square type="primary" color="#faf7f7" bindtap="goFilmReview">
+          <van-icon name="like" class="see-icon" />
+          看过
+        </van-button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="card">
+  <view class="section-content">
+    <text class="watch-title">剧情介绍</text>
+    <text class="subject-intro-conent omit {{onFold  ? 'isShow' : ''}}">{{watch.synopsis}}</text>
+    <text class="subject-intro-conent {{!onFold  ? 'isShow' : ''}}">{{watch.synopsis}}</text>
+    <van-button type="primary" block wx:if="{{showFold}}" catchtap="handleFold" color="#e54847">{{onFold ? "收起" : "全文"}}</van-button>
+  </view>
+</view>
+
+<view class="celebrities">
+  <view class="section-content">
+    <text class="watch-title">演职员</text>
+    <view class="celebrities-content">
+      <view class="celebrities-item" wx:for="{{watch.watchStar}}" wx:key="index">
+        <image src="{{item.url}}" mode="" />
+        <text class="name">{{item.starName}}</text>
+        <text class="position">{{item.starPost}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="subject-pics">
+  <view class="section-content">
+    <text class="watch-title">预告片 / 剧照</text>
+    <view class="subject-pics-content">
+      <view wx:for="{{watch.watchHerald}}" wx:key="index" class="subject-pics-video" wx:if="{{watch.watchHerald.length > 0}}" class="videoPlay">
+        <van-icon name="play-circle-o" color="#fff" size="120rpx" bind:tap="showPopup" />
+        <van-popup show="{{ show }}" bind:close="onClose">
+          <video src="{{item.url}}" play-btn-position="center" 	auto-pause-if-navigate="{{true}}" show-bottom-progress="{{false}}"></video>
+        </van-popup>
+      </view>
+      <view wx:for="{{watch.watchDrama}}" wx:key="index">
+        <image src="{{item.url}}" mode="heightFix" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="subject-reviews" wx:if="{{commentList.length != 0}}">
+  <view class="reviews">
+    <text class="watch-title">影评</text>
+  </view>
+  <view class="reviews-item" wx:for="{{commentList}}" wx:key="index">
+    <view class="critic">
+      <image src="{{item.photo}}" mode="" />
+      <view class="critic-information">
+        <text class="critic-information-name">{{item.username}}</text>
+        <view>
+          <van-rate value="{{item.score/2}}" size="{{ 15 }}" allow-half="true" color="#ffd21e" void-icon="star" void-color="#eee" count="5" readonly="false" />
+          <text class="critic-information-time">{{item.commentTime}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="comment">
+      <text>{{item.comment}}</text>
+    </view>
+  </view>
+</view>

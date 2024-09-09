@@ -1,0 +1,33 @@
+<!--components/watch/watch.wxml-->
+<scroll-view scroll-y style="height: 100%;" refresher-enabled="{{true}}" bindscrolltolower="scrolltolower" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <my-search></my-search>
+  <view class="bg" bind:touchstart="touchstart">
+    <view wx:if="{{watchList.length > 0}}">
+      <mp-slideview wx:for="{{watchList}}" show="{{showslide}}" buttons="{{slideButtons}}" wx:key="index" bindbuttontap="onBtn" data-btn="{{item}}">
+        <view class="watch">
+          <view class="watch-img">
+            <image src="{{item.img[0].url}}" mode="widthFix" />
+          </view>
+          <view class="watch-conent">
+            <view class="watch-conent-top">
+              <text class="watch-conent-title">{{item.title}}</text>
+              <view class="watch-conent-score" wx:if="{{item.score}}">
+                <van-rate value="{{item.score / 2}}" size="{{ 15 }}" allow-half="true" color="#ffd21e" void-icon="star" void-color="#eee" count="5" readonly="false" />
+                {{item.score}}
+              </view>
+              <view class="watch-conent-score" wx:else>
+                暂未评分
+              </view>
+              <text class="watch-conent-time">剧情：{{item.watchType}} - {{item.release}}上映 - 片长{{item.watchTime}}分钟</text>
+              <text class="watch-conent-time" wx:if="{{item.browseTime}}">浏览时间：{{item.browseTime}}</text>
+              <text class="watch-conent-time" wx:if="{{item.commentTime}}">浏览时间：{{item.commentTime}}</text>
+            </view>
+          </view>
+        </view>
+      </mp-slideview>
+    </view>
+    <view wx:else class="empty">
+      <text>暂无任何电影</text>
+    </view>
+  </view>
+</scroll-view>

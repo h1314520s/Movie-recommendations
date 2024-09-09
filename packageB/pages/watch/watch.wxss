@@ -1,0 +1,49 @@
+/* components/watch/watch.wxss */
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+.bg {
+  height: 100vh;
+}
+
+.watch {
+  display: flex;
+}
+
+.watch-img {
+  padding: 20rpx;
+}
+
+.watch-img image {
+  width: 210rpx;
+  height: 260rpx;
+  border-radius: 5px;
+}
+
+.watch-conent {
+  flex: 1;
+  height: 300rpx;
+  padding: 20rpx 40rpx 20rpx 20rpx;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.watch-conent-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.watch-conent-title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.watch-conent-time {
+  font-size: 28rpx;
+  color: #707070;
+}
+
+.empty {
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}

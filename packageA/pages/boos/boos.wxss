@@ -1,0 +1,17 @@
+/* components/boos/boos.wxss */
+page {
+  width: 100%;
+  height: 100vh;
+  background: #faf7f7;
+}
+
+.boos {
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.boos view image {
+  width: 200rpx;
+  height: 230rpx;
+  margin: 80rpx;
+}

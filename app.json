@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classification/classification",
+    "pages/charts/charts",
+    "pages/my/my",
+    "components/search/search",
+    "components/title/title"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/manage/manage",
+        "pages/boos/boos",
+        "pages/message/message",
+        "pages/login/login"
+      ]
+    }, {
+      "root": "packageB",
+      "name": "pack2",
+      "pages": [
+        "pages/chartsDetails/chartsDetails",
+        "pages/watchDetails/watchDetails",
+        "pages/agreement/agreement",
+        "pages/filmReview/filmReview",
+        "pages/watch/watch",
+        "pages/search/search",
+        "pages/edit/edit"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e54847",
+    "navigationBarTitleText": "嘉膑电影网",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor":  "#faf7f7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabs/home.png",
+        "selectedIconPath": "/images/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "/images/tabs/classification.png",
+        "selectedIconPath": "/images/tabs/classification-active.png"
+      },
+      {
+        "pagePath": "pages/charts/charts",
+        "text": "排行",
+        "iconPath": "/images/tabs/charts.png",
+        "selectedIconPath": "/images/tabs/charts-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabs/my.png",
+        "selectedIconPath": "/images/tabs/my-active.png"
+      }
+    ],
+    "selectedColor": "#e54847"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

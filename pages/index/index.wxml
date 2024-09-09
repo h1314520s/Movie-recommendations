@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<scroll-view scroll-y style="height: 100%;" refresher-enabled="{{true}}"	bindscrolltolower="scrolltolower" 	bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+<my-search></my-search>
+<view class="rated">
+  <my-title childValue="{{titleOne}}"></my-title>
+  <view class="top-rated">
+    <navigator class="top-rated-list" wx:for="{{recommendList}}" wx:key="index" url="/packageB/pages/watchDetails/watchDetails?id={{item.id}}">
+      <image src="{{item.img[0].url}}" alt="" />
+      <text class="omit">{{item.title}}</text>
+    </navigator>
+  </view>
+</view>
+<view class="recent">
+    <my-title childValue="{{titleTwo}}"></my-title>
+    <view class="top-recent">
+      <navigator class="top-recent-list" wx:for="{{list}}" wx:key="index" url="/packageB/pages/watchDetails/watchDetails?id={{item.id}}">
+        <image src="{{item.img[0].url}}" mode="" />
+        <view class="top-recent-introduce">
+          <text class="title omit">{{item.title}}</text>
+          <text wx:if="{{item.score}}">观众评：<text class="score">{{item.score}}</text> </text>
+          <text wx:else>暂无评分</text>
+          <text class="omit">主演：<text wx:for="{{item.star}}" wx:key="index" wx:if="{{index < 3}}">{{item.starName}} </text></text>
+          <text class="time omit">上线日期：{{item.release}} - 片长{{item.watchTime}}分钟</text>
+        </view>
+      </navigator>
+    </view>
+</view>
+</scroll-view>

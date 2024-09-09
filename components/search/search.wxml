@@ -1,0 +1,10 @@
+<!--components/search/search.wxml-->
+<view class="my-search-container">
+  <view class="my-search-box" wx:if="{{isShow}}" bind:tap="isShow">
+    <van-icon name="search" />
+    <text class="placeholder">搜索</text>
+  </view>
+  <view class="my-search-box" wx:else>
+    <van-search class="search" value="{{ value }}" background="#e54847" focus="true" bind:blur="isShow" bind:change="onChange"  placeholder="请输入搜索关键词" />
+  </view>
+</view>

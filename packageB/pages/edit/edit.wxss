@@ -1,0 +1,118 @@
+/* components/edit/edit.wxss */
+page {
+  height: 100vh;
+  background-color: #f7f8fa;
+}
+
+.edit {
+  width: 100%;
+}
+
+.edit .van-field__label--disabled {
+  color: #000;
+}
+
+.edit .van-field__control--disabled {
+  color: #000;
+}
+
+.address {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.up {
+  background-color: #fff;
+  padding: 10px 16px;
+
+}
+
+.up .title {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.up .watchType {
+  display: flex;
+  gap: 15rpx;
+  flex-wrap: wrap;
+  font-size: 30rpx;
+}
+
+.up .watchType .wx-radio-input {
+  width: 24rpx !important;
+  height: 24rpx !important;
+}
+  
+.up .watchType .wx-checkbox-input {
+  width: 24rpx !important;
+  height: 24rpx !important;
+}
+
+.up .up-content {
+  display: flex;
+  gap: 20rpx;
+  flex-wrap: wrap;
+}
+
+.up .upload {
+  position: relative;
+  width: 210rpx;
+  height: 210rpx;
+}
+
+.up .upload .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.up .upload image {
+  width: 210rpx;
+  height: 210rpx;
+  border: 1px solid #bfbfbf;
+}
+
+.upload-star {
+  width: 210rpx;
+  height: 315rpx;
+  border: 1px solid #bfbfbf;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-size: 23rpx;
+}
+
+.upload-star .top {
+  margin-top: 10px;
+}
+
+.up .upload-star .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 32rpx;
+  z-index: 3;
+}
+
+.upload-star image{
+  width: 210rpx;
+  height: 210rpx;
+}
+
+.upload-star .add {
+  margin-top: 50rpx;
+}
+
+.starUp {
+  margin: auto;
+  margin-bottom: 10rpx;
+}
+
+
+.up .refer{
+  margin-top: 30rpx;
+}

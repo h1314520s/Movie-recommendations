@@ -1,0 +1,22 @@
+<!--pages/classification/classification.wxml-->
+
+<view class="tab">
+  <view class="tab-left">
+    <view wx:for="{{typeList}}" class="{{index==active?'cur':''}}" data-index="{{index}}" bindtap="toggle" wx:key="index">{{item.title}}</view>
+  </view>
+  <scroll-view scroll-y style="height: 100%;" refresher-enabled="{{true}}" bindscrolltolower="scrolltolower" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+    <view class="tab-right">
+      <view wx:for="{{typeList}}" class="{{index==active?'cur':''}} tab-right-conent" data-index="{{index}}" wx:key="index">
+        <navigator class="conent" url="/packageB/pages/watchDetails/watchDetails?id={{item.id}}" wx:for="{{watchList}}" wx:key="index">
+          <view class="conent-img">
+            <image src="{{item.img[0].url}}" mode="scaleToFill" />
+          </view>
+          <view class="conent-text">
+            <text class="title">{{index + 1}}. {{item.title}}</text>
+            <text class="sketch">{{item.sketch}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>

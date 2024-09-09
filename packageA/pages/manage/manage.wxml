@@ -1,0 +1,17 @@
+<!--pages/manage/manage.wxml-->
+<scroll-view scroll-y style="height: 100%;" refresher-enabled="{{true}}" bindscrolltolower="scrolltolower" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <my-search></my-search>
+  <view class="bg" bind:touchstart="touchstart">
+    
+    <view>
+      <view class="watch-item add">
+        <button type="primary" bind:tap="addWatch">添加新电影</button>
+        </view>
+      <mp-slideview wx:for="{{watchList}}" show="{{showslide}}" buttons="{{slideButtons}}" wx:key="index" bindbuttontap="onBtn" data-btn="{{item}}">
+        <view class="watch-item">
+          <text class="serialNumber">{{index + 1}}.</text> {{item.title}}
+        </view>
+      </mp-slideview>
+    </view>
+  </view>
+</scroll-view>

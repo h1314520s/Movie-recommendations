@@ -1,0 +1,22 @@
+/* components/agreement/agreement.wxss */
+page {
+  height: 100vh;
+}
+
+text {
+  display: block;
+}
+
+.agreement {
+  padding-bottom: 25rpx;
+}
+
+.agreement-title {
+  text-align: center;
+  font-weight: 700;
+}
+
+.title {
+  font-weight: 700;
+  margin-top: 30rpx;
+}
